@@ -1,0 +1,18 @@
+###
+POST http://localhost:3000/signUp HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin",
+    "role":"Admin"
+}
+
+###
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
