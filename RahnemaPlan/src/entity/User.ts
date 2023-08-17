@@ -1,18 +1,30 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
+import { Role } from "../model/user";
 
 @Entity()
 export class User {
 
     @PrimaryGeneratedColumn()
-    id!: string
+    id!: string;
 
     @Column()
-    firstName!: string
+    firstName!: string;
 
     @Column()
-    lastName!: string
+    lastName!: string;
+
+    @Column({unique:true})
+    username!:string;
 
     @Column()
-    age!: number
+    password!:string;
 
+    @Column()
+    role!:Role
+
+    @CreateDateColumn()
+    createdAt!:Date;
+
+    @UpdateDateColumn()
+    updateAt!: Date;
 }
