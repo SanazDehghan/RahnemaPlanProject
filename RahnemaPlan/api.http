@@ -3,11 +3,11 @@ POST http://localhost:3000/signUp HTTP/1.1
 content-type: application/json
 
 {
-    "firstname": "rep",
-    "lastname":"repr", 
-    "username": "rep",
-    "password": "rep12345",
-    "role":"Representative"
+    "firstname": "admin",
+    "lastname":"admin", 
+    "username": "admin_admin",
+    "password": "admin1234567",
+    "role":"Admin"
 }
 
 ###
@@ -15,6 +15,6 @@ POST http://localhost:3000/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "rep",
-    "password": "rep12345"
+    "username": "admin",
+    "password": "admin12345"
 }

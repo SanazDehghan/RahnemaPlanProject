@@ -15,7 +15,7 @@ export class userservice{
         return user;
     }
 
-    async login(username:string, password:string):Promise<User|null>{
+    async login(username:string, password:string){
         const user = await this.userList.loginuser(username, password)
         if(user === null){
                 throw new Error("this user not found");
